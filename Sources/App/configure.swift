@@ -15,9 +15,13 @@ public func configure(_ app: Application) throws {
         database: Environment.get("DATABASE_NAME") ?? "vapor_database"
     ), as: .psql)
 
-    // register routes
+
+    // MARK: register routes
+
     try routes(app)
 
-    // add migrations
-    app.migrations.add(CreateUser())
+
+    // MARK: add migrations
+
+    app.migrations.add(Client.Create())
 }

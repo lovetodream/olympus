@@ -6,5 +6,5 @@ func routes(_ app: Application) throws {
         return .ok
     }
 
-    try app.register(collection: UserController())
+//    try app.register(collection: UserController())
 }
